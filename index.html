@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Database Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SecureBank</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#accounts">Accounts</a></li>
+                <li><a href="#transactions">Transactions</a></li>
+                <li><a href="#loans">Loans</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Welcome to Bank Database Management System</h2>
+            <p>Secure, Efficient, and User-Friendly Banking Solutions</p>
+            <button class="get-started-btn">Get Started</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Our Features</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <i class="fas fa-user-circle"></i>
+                <h3>Account Management</h3>
+                <p>Create and manage multiple accounts with ease and security.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-exchange-alt"></i>
+                <h3>Real-time Transactions</h3>
+                <p>Process and track transactions instantly with accurate balance updates.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-money-check-alt"></i>
+                <h3>Loan Management</h3>
+                <p>Apply for loans and manage your loan payments efficiently.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Reports & Statements</h3>
+                <p>Generate detailed financial reports and monthly statements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="login-modal" id="login-form">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-type">Login As</label>
+                    <select id="user-type" name="user-type">
+                        <option value="customer">Customer</option>
+                        <option value="staff">Staff</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <p class="forgot-password">Forgot Password?</p>
+            </form>
+        </div>
+    </section>
+
+    <section class="services" id="accounts">
+        <h2>Our Banking Services</h2>
+        <div class="service-tabs">
+            <div class="tab active" data-tab="savings">Savings Accounts</div>
+            <div class="tab" data-tab="checking">Checking Accounts</div>
+            <div class="tab" data-tab="fixed">Fixed Deposits</div>
+            <div class="tab" data-tab="recurring">Recurring Deposits</div>
+        </div>
+        <div class="tab-content active" id="savings-content">
+            <h3>Savings Accounts</h3>
+            <p>Our savings accounts offer competitive interest rates and flexible options to help you save for your future goals.</p>
+            <ul>
+                <li>Minimum balance: $100</li>
+                <li>Interest rate: 3.5% p.a.</li>
+                <li>Free online banking</li>
+                <li>Monthly statement generation</li>
+            </ul>
+            <button class="learn-more-btn">Learn More</button>
+        </div>
+        <!-- Other tab contents would go here -->
+    </section>
+
+    <section class="transactions" id="transactions">
+        <h2>Transaction Management</h2>
+        <div class="transaction-demo">
+            <div class="transaction-form">
+                <h3>Make a Transaction</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="from-account">From Account</label>
+                        <input type="text" id="from-account" placeholder="Account Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="to-account">To Account</label>
+                        <input type="text" id="to-account" placeholder="Account Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" placeholder="Amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="transaction-type">Transaction Type</label>
+                        <select id="transaction-type">
+                            <option value="transfer">Transfer</option>
+                            <option value="deposit">Deposit</option>
+                            <option value="withdrawal">Withdrawal</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="transaction-btn">Process Transaction</button>
+                </form>
+            </div>
+            <div class="transaction-history">
+                <h3>Recent Transactions</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>03/07/2025</td>
+                            <td>Salary Deposit</td>
+                            <td class="credit">+$2,500.00</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>03/05/2025</td>
+                            <td>Electric Bill</td>
+                            <td class="debit">-$85.75</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>03/01/2025</td>
+                            <td>Rent Payment</td>
+                            <td class="debit">-$1,200.00</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>02/28/2025</td>
+                            <td>Transfer to Savings</td>
+                            <td class="debit">-$500.00</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="view-all-btn">View All Transactions</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="loans" id="loans">
+        <h2>Loan Services</h2>
+        <div class="loan-cards">
+            <div class="loan-card">
+                <h3>Personal Loan</h3>
+                <p class="interest-rate">Interest Rate: 8.5% p.a.</p>
+                <p>Quick approval for your personal needs with flexible repayment options.</p>
+                <ul>
+                    <li>Loan amount up to $50,000</li>
+                    <li>Tenure: 1-5 years</li>
+                    <li>No collateral required</li>
+                </ul>
+                <button class="apply-now-btn">Apply Now</button>
+            </div>
+            <div class="loan-card">
+                <h3>Home Loan</h3>
+                <p class="interest-rate">Interest Rate: 6.75% p.a.</p>
+                <p>Make your dream home a reality with our affordable home loan options.</p>
+                <ul>
+                    <li>Loan amount up to $500,000</li>
+                    <li>Tenure: 5-30 years</li>
+                    <li>Property as collateral</li>
+                </ul>
+                <button class="apply-now-btn">Apply Now</button>
+            </div>
+            <div class="loan-card">
+                <h3>Education Loan</h3>
+                <p class="interest-rate">Interest Rate: 7.25% p.a.</p>
+                <p>Invest in your future with our education loan packages.</p>
+                <ul>
+                    <li>Loan amount up to $100,000</li>
+                    <li>Tenure: 5-15 years</li>
+                    <li>Repayment starts after course completion</li>
+                </ul>
+                <button class="apply-now-btn">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="reports" id="reports">
+        <h2>Reports & Statements</h2>
+        <div class="report-options">
+            <div class="report-option">
+                <h3>Account Statement</h3>
+                <p>Generate detailed statements for your accounts for any time period.</p>
+                <button class="generate-btn">Generate</button>
+            </div>
+            <div class="report-option">
+                <h3>Transaction History</h3>
+                <p>View and download your complete transaction history with filters.</p>
+                <button class="generate-btn">Generate</button>
+            </div>
+            <div class="report-option">
+                <h3>Loan Statement</h3>
+                <p>Check your loan repayment schedule and outstanding balances.</p>
+                <button class="generate-btn">Generate</button>
+            </div>
+            <div class="report-option">
+                <h3>Tax Statement</h3>
+                <p>Generate tax-related statements for your financial planning.</p>
+                <button class="generate-btn">Generate</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Banking Street, Financial District, City</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> support@securebank.com</p>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>SecureBank</h2>
+                <p>Secure, Efficient, and User-Friendly Banking Solutions</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#accounts">Accounts</a></li>
+                    <li><a href="#transactions">Transactions</a></li>
+                    <li><a href="#loans">Loans</a></li>
+                    <li><a href="#reports">Reports</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-services">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Online Banking</a></li>
+                    <li><a href="#">Mobile Banking</a></li>
+                    <li><a href="#">ATM Services</a></li>
+                    <li><a href="#">Investment Options</a></li>
+                    <li><a href="#">Credit Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates and offers.</p>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SecureBank Database Management System. All Rights Reserved.</p>
+            <p>Developed by: Ankitha (U25UV22T006003) & Krishna L (U25UV22T006021)</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
