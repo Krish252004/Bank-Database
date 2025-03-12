@@ -1,0 +1,115 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form Container */
+.bank-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 750px;
+}
+
+/* Headings */
+h2 {
+    color: #1E3A8A;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Grid Layout for Form */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+input, select, textarea {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Input Focus Effect */
+input:focus, select:focus, textarea:focus {
+    border-color: #1E3A8A;
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.3);
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* Full Width Elements */
+.full-width {
+    grid-column: span 2;
+    text-align: center;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.checkbox-group input {
+    margin-right: 7px;
+}
+
+.checkbox-group a {
+    color: #1E3A8A;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #1E3A8A;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 50%;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0F2557;
+}
